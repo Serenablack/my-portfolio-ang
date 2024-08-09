@@ -1,0 +1,100 @@
+$primary-color: #00ff99;
+$background-color: #121212;
+$text-color: #ffffff;
+$transition-duration: 0.5s;
+$circle-size: 20px;
+$mandala-size: 30px;
+
+.timeline-section {
+  padding: 20px;
+  cursor: pointer;
+  color: $text-color;
+  display: flex;
+
+  flex-direction: column;
+  align-items: center;
+
+  .title {
+    font-size: 3.6rem;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  .timeline {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    position: relative;
+
+    .vertical-bar {
+      width: 4px;
+      height: 50px;
+      background-color: $primary-color;
+      transition: all $transition-duration;
+      &.active {
+        height: 4px;
+        width: calc(100% - 60px); // Full width minus padding and circle size
+        position: absolute;
+        top: 50%;
+        left: 40px; // Align it horizontally
+        transform: translateY(-50%);
+      }
+    }
+  }
+
+  .horizontal-bar {
+    height: 4px;
+    width: 0;
+    background-color: $primary-color;
+    transition: width $transition-duration;
+    &.active {
+      width: calc(100% - 60px);
+      margin-top: 20px;
+    }
+  }
+
+  .circle {
+    width: $circle-size;
+    height: $circle-size;
+    background-color: $primary-color;
+    border-radius: 50%;
+    margin-top: 10px; // Adjust for alignment with bar
+    transition: all $transition-duration;
+    transition: all $transition-duration;
+    &.active {
+      background-image: url("/assets/mandala.png"); // Use an appropriate mandala image
+      background-size: cover;
+      width: $mandala-size;
+      height: $mandala-size;
+    }
+  }
+
+  .content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 800px;
+    margin-top: 20px;
+    transition: max-height $transition-duration, opacity $transition-duration;
+    overflow: hidden;
+
+    .content-left,
+    .content-right {
+      width: 48%;
+      margin: 20px 0;
+      padding: 10px;
+      text-align: center;
+    }
+
+    .content-right {
+      img {
+        width: 100%;
+        max-width: 400px;
+
+        border-radius: 10px;
+      }
+    }
+  }
+}

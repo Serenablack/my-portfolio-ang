@@ -1,0 +1,16 @@
+<div class="timeline-section" (click)="toggleContent()">
+  <div class="title">{{ title }}</div>
+  <div class="timeline">
+    <div class="vertical-bar" [contentEditable]="isExpanded()"></div>
+    <div class="horizontal-bar" [contentEditable]="!isExpanded()"></div>
+  </div>
+  <div class="circle" [contentEditable]="isExpanded()"></div>
+  @if (isExpanded()) {
+  <div class="content-left">
+    <ng-content select="[content]"></ng-content>
+  </div>
+  <div class="content-right">
+    <ng-content select="[image]"></ng-content>
+  </div>
+  }
+</div>
