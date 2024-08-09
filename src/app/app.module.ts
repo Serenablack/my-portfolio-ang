@@ -1,5 +1,4 @@
-import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { NgModule } from '@angular/core';
 import { SkillComponent } from './timeline/skill/skill.component';
 import { ResumeComponent } from './resume/resume.component';
 import { ProjectComponent } from './timeline/project/project.component';
@@ -7,26 +6,14 @@ import { ContactComponent } from './timeline/contact/contact.component';
 import { AboutComponent } from './timeline/about/about.component';
 import { HeaderComponent } from './header/header.component';
 import { BrowserModule } from '@angular/platform-browser';
+import { AppComponent } from './app.component';
 import { HeroComponent } from './hero/hero.component';
 
-@Component({
-  selector: 'app-root',
-  standalone: true,
+@NgModule({
+  declarations: [],
 
-  imports: [
-    RouterOutlet,
-    SkillComponent,
-    ResumeComponent,
-    ProjectComponent,
-    ContactComponent,
-    AboutComponent,
-    HeaderComponent,
-    HeroComponent,
-    AppComponent,
-  ],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.scss',
+  imports: [BrowserModule],
+  providers: [{ provide: Window, useValue: window }],
+  bootstrap: [AppComponent],
 })
-export class AppComponent {
-  title = 'my-portfolio-ang';
-}
+export class AppModule {}
