@@ -1,0 +1,51 @@
+$primary-color: #e5cfff;
+$background-color: #121212;
+$text-color: #ffffff;
+
+header {
+  background-color: $background-color;
+  padding: 20px 100px;
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .logo h1 {
+      color: $primary-color;
+      font-size: 1.5rem;
+    }
+
+    ul {
+      list-style: none;
+      display: flex;
+
+      li {
+        margin: 0 15px;
+
+        a {
+          color: $text-color;
+          text-decoration: none;
+          transition: color 0.3s;
+
+          &:hover {
+            color: $primary-color;
+          }
+        }
+      }
+    }
+
+    .hire-me {
+      background-color: $primary-color;
+      color: $background-color;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+
+      &:hover {
+        background-color: darken($primary-color, 10%);
+      }
+    }
+  }
+}
