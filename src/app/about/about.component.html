@@ -1,0 +1,27 @@
+<div class="main" id="skills">
+  <div class="skills-main">
+    <div class="skills-image" wmAnimate="fadeInRight" aos speed="normal">
+      <img
+        alt="Working animated"
+        src="../../assets/undraw_reminder_re_fe15.svg"
+        class="skills-image"
+      />
+    </div>
+    <div class="skills-text" wmAnimate="fadeInLeft" aos speed="normal">
+      <h1 class="skills-heading">{{ skillsSection.title }}</h1>
+      <p class="subTitle skills-text-subtitle">{{ skillsSection.subTitle }}</p>
+      <!-- @for( skill of skillsSection.skills; track skillsSection.skills){
+      <ul>
+        <li class="subTitle skills-text">{{ skill }}</li>
+      </ul>
+      } -->
+      <!-- <h2 class="goals-heading">My Future Goals:</h2> -->
+
+      @for( goal of skillsSection.futureGoals; track skillsSection.futureGoals){
+      <ul>
+        <li class="goals-text">{{ goal }}</li>
+      </ul>
+      }
+    </div>
+  </div>
+</div>
