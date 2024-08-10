@@ -1,0 +1,16 @@
+<div class="skills-main">
+  <h1 class="skill-heading">Skills</h1>
+  <div class="skill-cards">
+    @for(skill of skillsSection; track skill.skillName){
+    <div class="skill-card">
+      <div class="skills-icon">
+        <img class="skills-icon" src="{{ skill.icon }}" />
+      </div>
+
+      <div class="skill-name">
+        <div>{{ skill.skillName }}</div>
+      </div>
+    </div>
+    }
+  </div>
+</div>
