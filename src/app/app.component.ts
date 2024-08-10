@@ -1,10 +1,9 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { SkillComponent } from './timeline/skill/skill.component';
-import { ResumeComponent } from './resume/resume.component';
-import { ProjectComponent } from './timeline/project/project.component';
-import { ContactComponent } from './timeline/contact/contact.component';
-import { AboutComponent } from './timeline/about/about.component';
+import { SkillComponent } from './skill/skill.component';
+import { ProjectComponent } from './project/project.component';
+import { ContactComponent } from './contact/contact.component';
+import { AboutComponent } from './about/about.component';
 import { HeaderComponent } from './header/header.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { HeroComponent } from './hero/hero.component';
@@ -16,7 +15,6 @@ import { HeroComponent } from './hero/hero.component';
   imports: [
     RouterOutlet,
     SkillComponent,
-    ResumeComponent,
     ProjectComponent,
     ContactComponent,
     AboutComponent,
