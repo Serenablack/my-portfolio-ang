@@ -1,7 +1,5 @@
-$primary-color: #e5cfff;
-$background-color: #121212;
-$text-color: #ffffff;
-
+@import "../app.component.scss";
+@import "../components/button.scss";
 header {
   background-color: $background-color;
   padding: 20px 100px;
@@ -13,7 +11,7 @@ header {
 
     .logo h1 {
       color: $primary-color;
-      font-size: 1.5rem;
+      font-size: 2.5rem;
     }
 
     ul {

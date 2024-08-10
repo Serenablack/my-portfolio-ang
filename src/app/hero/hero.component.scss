@@ -1,7 +1,5 @@
-$primary-color: #e5cfff;
-$background-color: #121212;
-$text-color: #ffffff;
-
+@import "../app.component.scss";
+@import "../components/button.scss";
 .hero {
   display: flex;
   justify-content: space-between;
@@ -84,20 +82,6 @@ $text-color: #ffffff;
 
     p {
       margin: 20px 0;
-    }
-
-    button {
-      background-color: $primary-color;
-      color: $background-color;
-      border: none;
-      padding: 10px 20px;
-      cursor: pointer;
-      transition: background-color 0.3s;
-
-      &:hover {
-        background-color: $primary-color;
-        color: $background-color;
-      }
     }
 
     .social-icons {
