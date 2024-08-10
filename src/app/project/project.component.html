@@ -1,0 +1,36 @@
+<div class="projects-main">
+  <div class="projects-text" wmAnimate="fadeInLeft" aos speed="normal">
+    <h1 class="projects-heading">Projects</h1>
+    <!-- <p class="subTitle projects-text-subtitle">
+        {{ projects.subTitle }}
+      </p> -->
+    <div class="project-cards">
+      @for( project of projects; track project.name){
+      <div class="project-card">
+        <div class="project-image">
+          <!-- <img [src]="project.image" alt="{{ project.name }}" /> -->
+        </div>
+        <div class="project-content">
+          <h2 class="project-name">{{ project.name }}</h2>
+          <p class="project-description">{{ project.description }}</p>
+          <div class="project-links">
+            <a [href]="project.github" target="_blank" class="project-link">
+              <i class="fab fa-github"></i> GitHub
+            </a>
+            <!-- <a [href]="project.url" target="_blank" class="project-link">
+                Visit Site
+              </a> -->
+          </div>
+        </div>
+      </div>
+      }
+    </div>
+  </div>
+  <div class="project-image" wmAnimate="fadeInRight" aos speed="normal">
+    <img
+      alt="Working animated"
+      src="../../assets/undraw_project_complete_lwss.svg"
+      class="project-image"
+    />
+  </div>
+</div>

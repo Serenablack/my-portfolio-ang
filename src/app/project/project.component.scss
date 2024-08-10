@@ -1,0 +1,120 @@
+@import "../app.component.scss";
+
+.projects-main {
+  display: flex;
+  background-color: $background-color;
+
+  justify-content: space-between;
+  padding: 50px 100px 100px;
+}
+
+.projects-text {
+  margin-left: 50px;
+  color: $secondary-color;
+}
+
+.projects-main > * {
+  flex: 1;
+  margin-bottom: 30px;
+}
+
+.projects-heading {
+  font-size: 2.5rem;
+  font-weight: 400;
+  text-transform: uppercase;
+
+  color: $primary-color;
+  padding: 50px 0;
+}
+
+.project-cards {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 20px;
+}
+
+.project-card {
+  background-color: #1c1c1c;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 300px;
+  text-align: center;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.project-name {
+  font-size: 1.5rem;
+  color: $primary-color;
+  margin-bottom: 10px;
+}
+
+.project-description {
+  font-size: 16px;
+  color: $text-color;
+  margin-bottom: 15px;
+}
+
+.project-links {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.project-link {
+  font-size: 1rem;
+  color: $primary-color;
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.3s ease;
+}
+
+.project-image > img {
+  max-width: 70%;
+  height: auto;
+}
+.project-link:hover {
+  border-color: $primary-color;
+}
+
+/* Media Queries */
+@media (max-width: 1380px) {
+  .projects-heading {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .projects-heading {
+    font-size: 30px;
+    text-align: center;
+  }
+  .project-image > img {
+    flex-direction: column;
+    max-width: 50%;
+    height: auto;
+  }
+  .projects-main {
+    flex-direction: column;
+  }
+
+  .projects-text {
+    margin-left: 0px;
+    margin: 20px;
+  }
+
+  .project-card {
+    width: 100%;
+  }
+
+  .projects-text-subtitle {
+    font-size: 16px;
+    text-align: center;
+  }
+}
