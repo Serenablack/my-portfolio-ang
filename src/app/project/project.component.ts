@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef } from '@angular/core';
 
 @Component({
   selector: 'app-project',
@@ -8,6 +8,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./project.component.scss'],
 })
 export class ProjectComponent {
+  constructor(public elementRef: ElementRef) {}
+
   projects = [
     {
       name: 'E-commerce',
