@@ -34,4 +34,11 @@ export class HeroComponent {
   toggleRotation() {
     this.state = this.state === 'start' ? 'end' : 'start';
   }
+
+  downloadCV() {
+    const link = document.createElement('a');
+    link.href = '../../assets/Resume_Sandhya_Yadav_Aug5.pdf '; // Path to your CV file
+    link.download = 'My_CV.pdf'; // Name of the file to be downloaded
+    link.click();
+  }
 }
