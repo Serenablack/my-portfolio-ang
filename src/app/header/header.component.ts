@@ -6,6 +6,7 @@ import {
   transition,
   trigger,
 } from '@angular/animations';
+import { AppComponent } from '../app.component';
 
 @Component({
   selector: 'app-header',
@@ -29,7 +30,7 @@ import {
   ],
 })
 export class HeaderComponent implements OnInit {
-  constructor() {}
+  constructor(private appComponent: AppComponent) {}
   greeting = {
     username: 'Sandhya Yadav',
     title: "Hi all, I'm Sandhya",
@@ -39,5 +40,8 @@ export class HeaderComponent implements OnInit {
       'https://docs.google.com/document/d/1gqU-bpux8UxHcYw6Iar64c1szfDu55BWT9UAzoHn76o/edit?usp=sharing',
   };
 
+  scrollTo(section: string) {
+    this.appComponent.scrollToSection(section);
+  }
   ngOnInit(): void {}
 }

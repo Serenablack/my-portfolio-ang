@@ -1,4 +1,4 @@
-import { Component, signal } from '@angular/core';
+import { Component, ElementRef, signal } from '@angular/core';
 import { TimelineComponent } from '../timeline/timeline.component';
 
 @Component({
@@ -34,7 +34,7 @@ export class AboutComponent {
       '🌱 Find a role that challenges me and allows me to grow',
     ],
   };
-  constructor() {}
+  constructor(public elementRef: ElementRef) {}
 
   ngOnInit(): void {}
 }
