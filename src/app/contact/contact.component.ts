@@ -7,6 +7,7 @@ import {
 } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 import { AlertService } from '../alert.service';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-contact',
@@ -84,8 +85,12 @@ export class ContactComponent {
 
   constructor(
     public elementRef: ElementRef,
-    private alertService: AlertService
+    private alertService: AlertService,
+    private toastr: ToastrService
   ) {}
+  showSuccess() {
+    this.toastr.success('Hello world!', 'Toastr fun!');
+  }
 
   onSubmit() {
     const payload = {
@@ -93,27 +98,26 @@ export class ContactComponent {
       message: this.contactForm.value.message,
       timestamp: new Date().toISOString(),
     };
+    this.showSuccess();
+    // this.#http
+    //   .post(
+    //     'https://4g9yb1wvf7.execute-api.us-east-1.amazonaws.com/testStage/message',
+    //     payload
+    //   )
+    //   .subscribe(
+    //     (response) => {
+    //       this.contactForm.reset();
+    //       this.alertService.showAlert(
+    //         'success',
+    //         'Operation Successful',
+    //         'Your operation was completed successfully.'
+    //       );
+    //     },
+    //     (error) => {
+    //       this.contactForm.reset();
 
-    this.#http
-      .post(
-        'https://4g9yb1wvf7.execute-api.us-east-1.amazonaws.com/testStage/message',
-        payload
-      )
-      .subscribe(
-        (response) => {
-          this.contactForm.reset();
-          this.alertService.showAlert(
-            'success',
-            'Operation Successful',
-            'Your operation was completed successfully.'
-          );
-          console.log('Message sent successfully:', response);
-        },
-        (error) => {
-          this.contactForm.reset();
-
-          console.error('Error sending message:', error);
-        }
-      );
+    //       console.error('Error sending message:', error);
+    //     }
+    //   );
   }
 }

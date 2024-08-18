@@ -7,6 +7,7 @@ import {
   trigger,
 } from '@angular/animations';
 import { AppComponent } from '../app.component';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-header',
@@ -30,7 +31,10 @@ import { AppComponent } from '../app.component';
   ],
 })
 export class HeaderComponent implements OnInit {
-  constructor(private appComponent: AppComponent) {}
+  constructor(
+    private appComponent: AppComponent,
+    private toastr: ToastrService
+  ) {}
   greeting = {
     username: 'Sandhya Yadav',
     title: "Hi all, I'm Sandhya",
@@ -42,6 +46,7 @@ export class HeaderComponent implements OnInit {
 
   scrollTo(section: string) {
     this.appComponent.scrollToSection(section);
+    this.toastr.success('This is a success', 'i am scrolling,');
   }
   ngOnInit(): void {}
 }
