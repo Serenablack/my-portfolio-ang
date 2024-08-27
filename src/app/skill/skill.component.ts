@@ -41,11 +41,11 @@ export class SkillComponent implements OnInit {
     },
     {
       skillName: 'SpringBoot',
-      icon: '    https://img.icons8.com/?size=100&id=A3Ulk2RcONKs&format=png&color=000000',
+      icon: 'https://img.icons8.com/?size=100&id=A3Ulk2RcONKs&format=png&color=000000',
     },
     {
       skillName: 'Express',
-      icon: 'https://img.icons8.com/?size=100&id=kg46nzoJrmTR&format=png&color=000000',
+      icon: 'https://img.icons8.com/?size=100&id=2ZOaTclOqD4q&format=png&color=000000',
     },
     {
       skillName: 'Github',
@@ -65,7 +65,7 @@ export class SkillComponent implements OnInit {
     },
     {
       skillName: 'NextJS',
-      icon: 'https://img.icons8.com/?size=100&id=yUdJlcKanVbh&format=png&color=000000',
+      icon: 'https://img.icons8.com/?size=100&id=MWiBjkuHeMVq&format=png&color=000000',
     },
     {
       skillName: 'AWS services',
