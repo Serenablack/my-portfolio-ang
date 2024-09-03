@@ -39,9 +39,18 @@ export class HeaderComponent implements OnInit {
     resumeLink:
       'https://docs.google.com/document/d/1gqU-bpux8UxHcYw6Iar64c1szfDu55BWT9UAzoHn76o/edit?usp=sharing',
   };
+  menuOpen = false;
+
+  toggleMenu() {
+    this.menuOpen = !this.menuOpen;
+  }
 
   scrollTo(section: string) {
-    this.appComponent.scrollToSection(section);
+    const element = document.getElementById(section);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+      this.menuOpen = false;
+    }
   }
   ngOnInit(): void {}
 }

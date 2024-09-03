@@ -3,12 +3,17 @@
     <div class="logo">
       <h1>Hello World!</h1>
     </div>
-    <ul>
-      <li><a (click)="scrollTo('hero')">Home</a></li>
-      <li><a (click)="scrollTo('about')">About</a></li>
-      <li><a (click)="scrollTo('project')">Projects</a></li>
-      <li><a (click)="scrollTo('skill')">Skills</a></li>
-    </ul>
+    <div class="menu">
+      <div class="hamburger" (click)="toggleMenu()">
+        <i class="fas fa-bars"></i>
+      </div>
+      <ul [class.show]="menuOpen">
+        <li><a (click)="scrollTo('hero')">Home</a></li>
+        <li><a (click)="scrollTo('about')">About</a></li>
+        <li><a (click)="scrollTo('project')">Projects</a></li>
+        <li><a (click)="scrollTo('skill')">Skills</a></li>
+      </ul>
+    </div>
     <button class="main-button" (click)="scrollTo('contact')">Contact</button>
   </nav>
 </header>
