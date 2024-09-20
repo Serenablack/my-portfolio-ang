@@ -12,6 +12,7 @@ import { AppComponent } from '../app.component';
   selector: 'app-header',
   standalone: true,
   imports: [],
+
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss'],
   animations: [
@@ -46,6 +47,8 @@ export class HeaderComponent implements OnInit {
   }
 
   scrollTo(section: string) {
+    this.appComponent.scrollToSection(section);
+
     const element = document.getElementById(section);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
