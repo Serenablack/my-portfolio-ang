@@ -60,7 +60,6 @@ export class AppComponent {
       default:
         return;
     }
-    console.log(element, element.nativeElement);
     if (element && element.nativeElement) {
       element.nativeElement.scrollIntoView({
         behavior: 'smooth',
