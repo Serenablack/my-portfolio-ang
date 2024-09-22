@@ -48,10 +48,7 @@ export class HeaderComponent implements OnInit {
 
   scrollTo(section: string) {
     this.appComponent.scrollToSection(section);
-
-    const element = document.getElementById(section);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+    if (this.appComponent.title) {
       this.menuOpen = false;
     }
   }
