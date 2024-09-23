@@ -1,3 +1,7 @@
+@import "ngx-toastr/toastr";
+@import "bootstrap/scss/bootstrap-grid";
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 $primary-color: #e5cfff;
 $background-color: #121212;
 $text-color: #ffffff;
@@ -51,32 +55,38 @@ $breakpoint-mobile: 768px;
   font-weight: $font-weight-regular;
   color: $secondary-color;
 }
-// @font-face {
-//   font-family: "Agustina Regular";
-//   font-style: normal;
-//   font-weight: normal;
-//   src: local("Agustina Regular"),
-//     url("../assets/fonts/Agustina.woff") format("woff");
-//   font-display: swap;
-// }
-// @font-face {
-//   font-family: "Montserrat";
-//   src: local("Montserrat"),
-//     url("../assets/fonts/Montserrat-Regular.ttf") format("woff");
-//   font-display: swap;
-// }
+@font-face {
+  font-family: "Agustina Regular";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Agustina Regular"),
+    url("../assets/fonts/Agustina.woff") format("woff");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Montserrat";
+  // src: local("Montserrat"),
+  //   url("../assets/fonts/Montserrat-Regular.ttf") format("woff");
+  font-display: swap;
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
 html,
 body {
+  height: 100%;
+  background-color: $background-color;
+}
+body {
+  margin: 0;
+  font-family: Montserrat, "Helvetica Neue", sans-serif;
   scroll-behavior: smooth;
 }
 
 // Mixins
 @mixin container {
-  max-width: $max-width;
   margin: 0 auto;
   padding: 0 20px;
 }
