@@ -2,12 +2,11 @@
 @import "../components/button.scss";
 .contact-main {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: flex-start;
   padding: 50px 100px 100px;
   background-color: $background-color;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  // box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
 .contact-left {
@@ -22,6 +21,7 @@
 
 .contact-title {
   font-size: 2.5rem;
+  font-weight: 600;
   color: $primary-color;
   margin-bottom: 20px;
 }
@@ -83,4 +83,24 @@ textarea {
 
 button {
   width: 50% !important;
+}
+
+@media (max-width: 768px) {
+  .contact-main {
+    display: grid;
+    justify-content: center;
+  }
+  .contact-left {
+    flex: 2;
+    margin-right: 10px;
+  }
+
+  .contact-right {
+    margin-top: 50px;
+    flex: 1;
+  }
+
+  .contact-title {
+    text-align: center;
+  }
 }
