@@ -37,8 +37,8 @@ export class HeroComponent {
 
   downloadCV() {
     const link = document.createElement('a');
-    link.href = '../../assets/Resume_Sandhya_Yadav_Aug5.pdf '; // Path to your CV file
-    link.download = 'My_CV.pdf'; // Name of the file to be downloaded
+    link.href = '../../assets/src/assets/Resume_Sandhya_Yadav_Sep214.pdf';
+    link.download = 'My_CV.pdf';
     link.click();
   }
 }
