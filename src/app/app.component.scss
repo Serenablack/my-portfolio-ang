@@ -65,8 +65,8 @@ $breakpoint-mobile: 768px;
 }
 @font-face {
   font-family: "Montserrat";
-  // src: local("Montserrat"),
-  //   url("../assets/fonts/Montserrat-Regular.ttf") format("woff");
+  font-size: medium;
+  src: url("../assets/fonts/Montserrat-Regular.ttf") format("ttf");
   font-display: swap;
 }
 code {
